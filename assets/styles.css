@@ -1,0 +1,88 @@
+:root {
+    --ColorBody: #0b031b;
+    --bodyTExtColor: #fff;
+    --HoverColor: #1cda1c;
+    list-style: none;
+}
+
+body {
+    background-color: var(--ColorBody);
+    color: var(--bodyTExtColor);
+    width: 100vw;
+    margin: 0;
+}
+
+h3 {
+    /* border: solid white; */
+    padding-left: 1rem;
+    min-width: 125px;
+}
+
+span {
+    color: rgb(14, 248, 14);
+    font-size: 19px;
+}
+
+header {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    /* border: red solid; */
+    box-shadow: 3px 3px 9px rgba(0, 0, 0, .3);
+}
+
+.contents-one {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 80%;
+    /* border: purple solid; */
+}
+
+.line {
+    width: 1px;
+    height: 20px;
+    background-color: rgb(167, 179, 167);
+    border: none;
+    margin: .75rem;
+}
+
+.no-list-style {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    /* border: green solid; */
+}
+
+.no-list-style a:hover, .icons a:hover {
+    color: var(--HoverColor);
+    transition: all 0.26s ease-in-out;
+    cursor: pointer;
+}
+
+.no-list-style a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* .hidden {
+    display: none;
+} */
+
+.icons {
+    width: 5rem;
+    /* border: blue solid; */
+    display: flex;
+    justify-content: space-evenly;
+    gap: 5px;
+}
+
+.icons a {
+    color: var(--bodyTExtColor);
+    font-size: 23px;
+}
