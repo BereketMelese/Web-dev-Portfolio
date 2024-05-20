@@ -115,6 +115,7 @@ header {
     height: 90vh;
     justify-content: space-evenly;
     padding: 50px;
+    width: 100%;
 }
 
 .text h3, .text h4 {
