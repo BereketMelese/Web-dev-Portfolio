@@ -5,7 +5,11 @@ const autoEl = document.querySelector(".auto")
 const words = ['Software Engineer', 'Frontend Developer'];
 
 burgerEl.addEventListener("click", ()=> {
-    menuEl.style.display = "block";
+    if (menuEl.style.display === "block") {
+        menuEl.style.display = "none";
+    } else {
+        menuEl.style.display = "block"
+    }
 })
 
 bodyEl.addEventListener("click", ()=> {
@@ -22,10 +26,7 @@ updateText()
 
 function updateText() {
     autoEl.innerText = `${words[wordsIndex].slice(0, characterIndex)}`;
-    autoEl.style.color = "#1cda1c";
-    autoEl.style.background = "linear-gradient(45deg,#ffcc00,#ff9f00)";
-    autoEl.style.webkitTextFillColor = "transparent";
-    autoEl.style.backgroundClip = "text";
+    autoEl.style.color = "var(--demo)";
     characterIndex++;
     if (characterIndex === words[wordsIndex].length + 1) {
         wordsIndex++;
@@ -34,5 +35,5 @@ function updateText() {
     if (wordsIndex === words.length) {
         wordsIndex = 0;
     }
-    setTimeout(updateText, 300);
+    setTimeout(updateText, 400);
 }
