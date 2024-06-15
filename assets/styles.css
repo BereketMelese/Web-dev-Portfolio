@@ -4,13 +4,13 @@
     --HoverColor: rgb(199, 199, 32);
     --HighlightColor: #32CD32;
     --FormBgColor: #162447;
+    --cardButton: #007bff;
+    --navColor: wheat;
+    --cardbttonhvr: #0056b3;
     --NavbarBgColor: #0f3460;
     --FooterBgColor: #0f3460;
-    --GradientColorStart: #ff6f61;
-    --GradientColorEnd: #ff4c60;
     --SkillGradientStart: #1f4068;
     --SkillGradientEnd: #162447;
-    --ThemeColor: ;
     --FontFamily: 'Raleway', sans-serif;
 }
 
@@ -71,18 +71,21 @@ header {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    width: 85%;
+    width: 65%;
 }
 
-.contents-one > h3 {
+.contents-one > a > h3 {
     padding-left: 1rem;
     min-width: 125px;
-    color: var(--bodyTextColor);
+    color: rgb(255, 220, 62);
 }
 
-.contents-one > h3 > span {
-    color: var(--HoverColor);
-    font-size: 19px;
+.contents-one > a > h3 > .point {
+    background-color: rgb(255, 220, 62);
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
 }
 
 .line {
@@ -94,9 +97,10 @@ header {
 
 .navs {
     padding: 0;
-    width: 50%;
+    width: 45%;
     display: flex;
-    justify-content: space-between;
+    gap: 25px;
+    color: var(--navColor);
 }
 
 .navs > a {
@@ -125,7 +129,6 @@ header {
 
 .sections {
     padding-top: 80px;
-    padding-bottom: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -173,12 +176,10 @@ header {
     border-radius: 50%;
     box-shadow: 0 0 10px rgb(14, 9, 37);
     transition: transform 0.3s ease;
-    /* animation: glow 1.5s infinite alternate; */
     overflow: hidden;
 }
 
 #img img {
-    /* animation: moving infinite 90s; */
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -186,7 +187,7 @@ header {
 }
 
 
-.skill-section {
+.skill-section, .service-section {
     flex-direction: column;
     text-align: center;
 }
@@ -212,10 +213,49 @@ header {
     filter: brightness(1.2);
     transform: scale(1.1);
 }
+.card-container {
+    display: flex;
+    gap: 20px;  
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
-.feedback-section {
-    flex-direction: column;
+.card {
+    background-color: var(--FormBgColor);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
     text-align: center;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-10px); 
+}
+
+.card-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: var(--bodyTextColor);
+}
+
+.card-description {
+    font-size: 1em;
+    color: var(--bodyTextColor);
+    margin-bottom: 20px;
+}
+
+.card-button {
+    background-color: var(--cardButton);
+    color: var(--bodyTextColor);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.card-button:hover {
+    background-color: var(--cardbttonhvr);
 }
 
 .container {
@@ -258,6 +298,12 @@ header {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.message-container > p {
+    margin: 20px 0;
+    font-weight: 300;
+    letter-spacing: .14px;
+}
+
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -288,11 +334,7 @@ header {
 .contact-form button:active {
     background-color: #27612e;
 }
-.social-links {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-}
+
 
 .social-links {
     display: flex;
@@ -318,7 +360,6 @@ footer {
     align-items: center;
     text-align: center;
     height: 50px;
-    /* position: fixed; */
     width: 100%;
     z-index: 9;
     bottom: 0;
@@ -332,31 +373,6 @@ footer .back-to-top {
 
 footer .back-to-top:hover {
     transform: scale(1.3);
-}
-
-
-@keyframes moving {
-    0% {
-        transform: scale(0.8);
-    }
-    40% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(0.8);
-    }
-}
-
-@keyframes glow {
-    0% {
-        box-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow, 0 0 40px yellow, 0 0 50px yellow, 0 0 60px yellow, 0 0 70px yellow;
-    }
-    100% {
-        box-shadow: 0 0 20px yellow, 0 0 30px yellow, 0 0 40px yellow, 0 0 50px yellow, 0 0 60px yellow, 0 0 70px yellow, 0 0 80px yellow;
-    }
 }
 
 @keyframes moveSkills {
@@ -422,6 +438,7 @@ footer .back-to-top:hover {
     }
 
     #home {
+        margin-top: 30px;
         flex-direction: column;
         gap: 35px;
     }
