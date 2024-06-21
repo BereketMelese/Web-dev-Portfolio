@@ -1,16 +1,20 @@
 :root {
     --ColorBody: #1a1a2e;
     --bodyTextColor: #eaeaea;
-    --HoverColor: rgb(199, 199, 32);
-    --HighlightColor: #32CD32;
+    --HoverColor: #c7c720;
+    --brightYellow: #ffdc3e;
+    --sectionh1: rgb(216, 181, 27);
     --FormBgColor: #162447;
     --cardButton: #007bff;
-    --navColor: wheat;
+    --navColor: #f5deb3;
+    --shadow: #0e0925;
     --cardbttonhvr: #0056b3;
     --NavbarBgColor: #0f3460;
     --FooterBgColor: #0f3460;
     --SkillGradientStart: #1f4068;
     --SkillGradientEnd: #162447;
+    --menuHover: rgb(34, 34, 128);
+    --webkitBg: #1a1719;
     --FontFamily: 'Raleway', sans-serif;
 }
 
@@ -40,7 +44,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background: rgb(26, 23, 25); 
+    background: var(--webkitBg); 
     border-radius: 10px;
 }
 
@@ -58,7 +62,7 @@ header {
     position: fixed;
     justify-content: space-between;
     top: 0;
-    box-shadow: 3px 3px 9px rgb(14, 9, 37);
+    box-shadow: 3px 3px 9px var(--shadow);
     padding: 10px 0;
 }
 
@@ -77,11 +81,11 @@ header {
 .contents-one > a > h3 {
     padding-left: 1rem;
     min-width: 125px;
-    color: rgb(255, 220, 62);
+    color: var(--brightYellow);
 }
 
 .contents-one > a > h3 > .point {
-    background-color: rgb(255, 220, 62);
+    background-color: var(--brightYellow);
     display: inline-block;
     height: 6px;
     width: 6px;
@@ -111,7 +115,7 @@ header {
 
 .navs a:hover,
 .icons a:hover {
-    color: var(--HoverColor);
+    color: var(--brightYellow);
     cursor: pointer;
 }
 
@@ -123,7 +127,7 @@ header {
 }
 
 .icons a {
-    color: var(--bodyTextColor);
+    color: var(--navColor);
     font-size: 25px;
 }
 
@@ -139,11 +143,11 @@ header {
     font-size: 48px;
     font-weight: 650;
     margin-bottom: 20px;
-    color: rgb(216, 181, 27);
+    color: var(--sectionh1);
 }
 
 .coma {
-    color: rgb(245, 203, 15);
+    color: var(--brightYellow);
     font-size: 30px;
 }
 
@@ -180,7 +184,7 @@ header {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    box-shadow: 0 0 10px rgb(14, 9, 37);
+    box-shadow: 0 0 10px var(--shadow);
     transition: transform 0.3s ease;
     overflow: hidden;
 }
@@ -329,7 +333,7 @@ header {
 .contact-form button {
     padding: 10px;
     border: none;
-    background-color: #3bb048;
+    background-color: var(--cardbttonhvr);
     color: var(--bodyTextColor);
     font-size: 16px;
     cursor: pointer;
@@ -338,7 +342,7 @@ header {
 }
 
 .contact-form button:active {
-    background-color: #27612e;
+    background-color: var(--cardButton);
 }
 
 
@@ -349,14 +353,14 @@ header {
 }
 
 .social-links a {
-    color: var(--HoverColor);
+    color: var(--cardButton);
     font-size: 24px;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .social-links a:hover {
-    color: #3bb048;
+    color: var(--brightYellow);
 }
 
 footer {
@@ -372,7 +376,7 @@ footer {
 }
  
 footer .back-to-top {
-    color: var(--HoverColor);
+    color: var(--brightYellow);
     text-decoration: none;
     transition: transform 0.3s;
 }
@@ -440,7 +444,7 @@ footer .back-to-top:hover {
     }
 
     .menu a:hover {
-        background-color: rgb(34, 34, 128);
+        background-color: var(--menuHover);
     }
 
     #home {
